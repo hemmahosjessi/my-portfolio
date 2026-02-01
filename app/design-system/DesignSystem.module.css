@@ -1,0 +1,94 @@
+.page {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+    max-width: 70ch;
+  }
+  
+  .intro {
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+  }
+  
+  .section {
+    margin-top: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 560px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .swatch {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+  }
+  
+  .color {
+    height: 90px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .meta {
+    padding: 0.9rem 1rem;
+  }
+  
+  .name {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .value {
+    margin: 0.25rem 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  .radiusRow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  
+  @media (max-width: 900px) {
+    .radiusRow {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 560px) {
+    .radiusRow {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .radiusCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+  }
+  

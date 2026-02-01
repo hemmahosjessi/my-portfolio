@@ -1,0 +1,57 @@
+/* =========================================================
+   Color tokens
+   ========================================================= */
+
+   :root {
+    /* Base */
+    --bg: #ffffff;
+  
+    /* Text */
+    --text: #111312;
+    --text-muted: #5c635f;
+    --text-highlight: #29964D;
+  
+    /* Surfaces */
+    --surface: #fcfcf8;
+    --surface-2: #f7f7f0;
+  
+    /* Borders */
+    --border: rgba(17, 19, 18, 0.10);
+  
+    /* Brand / accent */
+    --accent: #ffd400;
+    --accent-hover: #d9b200;
+    --accent-contrast: #111111;
+
+
+    /* Accent (stable across themes) */
+     --accent: #ffd400;
+     --accent-hover: #d9b200;
+     --accent-contrast: #111111;
+      
+     /* Content / Icons (stable ink) */
+    --ink: #111111;
+    --ink-muted: #2a2a2a;
+    --content: var(--ink);
+    --content-muted: var(--ink-muted);
+    --content-accent: var(--accent);
+    --content-accent-contrast: var(--ink);
+  }
+
+
+  
+/* =========================================================
+   Dark mode
+   ========================================================= */
+
+  :root[data-theme="dark"] {
+    --bg: #0e1110;
+    --surface: #141817;
+    --surface-2: #1a1f1d;
+  
+    --text: #e5e7e6;
+    --text-muted: #9aa3a0;
+  
+    --border: rgba(229, 231, 230, 0.14);
+  }
+  

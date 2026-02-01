@@ -1,0 +1,14 @@
+.header {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem; /* nästan inget */
+  }
+  
+  .title {  
+    margin-top: 0; /* viktigt */
+  }
+  
+  

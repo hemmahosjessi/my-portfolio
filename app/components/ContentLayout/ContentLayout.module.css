@@ -1,0 +1,12 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--space-12);
+    width: 100%;
+  }
+  
+  /* sizes */
+  .md { max-width: 70ch; }   /* bra läsbredd */
+  .lg { max-width: 1000px; } /* om du vill ha större grids */
+  .sm { max-width: 55ch; }
+  

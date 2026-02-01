@@ -1,0 +1,81 @@
+.button {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+
+  transition:
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   Primary (CTA)
+   ========================================= */
+
+.primary {
+  /* padding: 1rem 1.25rem; */
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: fit-content;
+  align-self: flex-start;
+  border: 0;
+}
+
+.primary:hover {
+  background: var(--accent-hover); /* ren, solid hover */
+}
+
+/* (valfritt) tryckkänsla */
+.primary:active {
+  transform: translateY(1px);
+}
+
+/* =========================================
+   Secondary (utility)
+   Used for "Design system" + Theme toggle look
+   ========================================= */
+
+.secondary {
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  border: 0;
+}
+
+.secondary:hover {
+  /* lite mörkare grå, men fortfarande "ren" */
+  background: color-mix(in srgb, var(--surface-2) 85%, var(--text));
+}
+
+.secondary:active {
+  transform: translateY(1px);
+}
+
+/* =========================================
+   Icon button (Theme toggle etc)
+   Should visually match Secondary
+   ========================================= */
+
+.icon {
+  /* width: 40px;
+  height: 40px; */
+  padding: 0;
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.icon:hover {
+  background: color-mix(in srgb, var(--surface-2) 85%, var(--text));
+}
+
+.icon:active {
+  transform: translateY(1px);
+}
