@@ -1,94 +1,40 @@
-.page {
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+.designSystemPage {
+  padding-inline: clamp(var(--space-8), 6vw, var(--space-15));
+  padding-top: var(--space-14);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(var(--space-10), 10vw, var(--space-15));
+}
+
+
+/* .designSystemPage {
+  padding-inline: clamp(var(--space-8, 2rem), 6vw, var(--space-15, 6rem));
+  padding-top: var(--space-12);
+} */
+
+/* Swatch-grid: 4 i rad MAX, men inom högerspalten (40%) */
+.swatchGrid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+}
+
+/* Bryt ner antal kolumner när utrymmet minskar */
+@media (max-width: 1100px) {
+  .swatchGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  
-  .header {
-    margin-bottom: 3rem;
-    max-width: 70ch;
+}
+
+@media (max-width: 900px) {
+  .swatchGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
-  .intro {
-    color: var(--text-muted);
-    margin-top: 0.75rem;
+}
+
+@media (max-width: 520px) {
+  .swatchGrid {
+    grid-template-columns: 1fr;
   }
-  
-  .section {
-    margin-top: 3rem;
-  }
-  
-  .sectionTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-  }
-  
-  @media (max-width: 900px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 560px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .swatch {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-m);
-    overflow: hidden;
-  }
-  
-  .color {
-    height: 90px;
-    border-bottom: 1px solid var(--border);
-  }
-  
-  .meta {
-    padding: 0.9rem 1rem;
-  }
-  
-  .name {
-    margin: 0;
-    font-weight: 600;
-  }
-  
-  .value {
-    margin: 0.25rem 0 0 0;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-  
-  .radiusRow {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-  }
-  
-  @media (max-width: 900px) {
-    .radiusRow {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 560px) {
-    .radiusRow {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .radiusCard {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1.25rem;
-  }
-  
+}

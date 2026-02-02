@@ -105,6 +105,7 @@ main {
 }
 
 .navLinks {
+  font-size: var(--title-m);
   display: flex;
   align-items: center;
   gap: 24px;
@@ -119,7 +120,6 @@ main {
 .navLink {
   position: relative;
   padding: 6px 0;
-  font-weight: 600;
   color: var(--text-muted);
   transition: color 0.2s ease;
 }

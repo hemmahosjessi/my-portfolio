@@ -3,31 +3,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: var(--space-2);
+
+  padding: 0 var(--space-4);
+
   border-radius: var(--radius-full);
   cursor: pointer;
   text-decoration: none;
-  padding: 1rem 1.25rem;
+  border: 0;
+
+  /* 👇 TYPOGRAPHY FROM TOKENS */
+  font-family: var(--font-heading);
+  font-size: var(--title-m);
+  font-weight: var(--title-weight);
+  line-height: var(--title-line-height);
 
   transition:
     background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 /* =========================================
    Primary (CTA)
    ========================================= */
 
-.primary {
-  /* padding: 1rem 1.25rem; */
-  background: var(--accent);
-  color: var(--accent-contrast);
-  font-weight: 600;
-  font-size: 0.9rem;
-  width: fit-content;
-  align-self: flex-start;
-  border: 0;
-}
+   .primary {
+    background: var(--accent);
+    color: var(--accent-contrast);
+    width: fit-content;
+    align-self: flex-start;
+  }
+  
 
 .primary:hover {
   background: var(--accent-hover); /* ren, solid hover */
@@ -43,12 +50,11 @@
    Used for "Design system" + Theme toggle look
    ========================================= */
 
-.secondary {
-  background: var(--surface-2);
-  color: var(--text);
-  font-weight: 600;
-  border: 0;
-}
+   .secondary {
+    background: var(--surface-2);
+    color: var(--text);
+  }
+  
 
 .secondary:hover {
   /* lite mörkare grå, men fortfarande "ren" */

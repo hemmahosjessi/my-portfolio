@@ -1,0 +1,33 @@
+.section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr); /* ~60/40 */
+    gap: clamp(var(--space-4), 4vw, var(--space-10));
+    align-items: start;
+  }
+  
+  /* Vänsterspalten */
+  .left {
+    position: sticky;
+    top: calc(72px + var(--space-8)); /* 72px = din headerhöjd, justera vid behov */
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  /* Högerspalten */
+  .right {
+    min-width: 0; /* viktigt så grid-barn kan krympa */
+  }
+  
+  /* Responsivt: stacka */
+  @media (max-width: 900px) {
+    .section {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+  
+    .left {
+      position: static;
+    }
+  }
+  
