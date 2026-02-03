@@ -1,6 +1,7 @@
 import DocSection from "../components/DocSection/DocSection";
 import ColorSwatch from "../components/ColorSwatch/ColorSwatch";
 import styles from "./DesignSystem.module.css";
+import TypoCloudItem from "../components/TypoCloudItem/TypoCloudItem";
 
 export default function DesignSystemPage() {
   return (
@@ -33,6 +34,20 @@ export default function DesignSystemPage() {
         title="Typography"
         body="Intro on typography."
       >
+        <div className={styles.typoGrid}>
+          <TypoCloudItem tokenClass="display-l" name="Display-L" size="128 / 1.05" view="Aa"/>
+          <TypoCloudItem tokenClass="display-m" name="Display-M" size="xx/xx" view="Bb"/>
+          <TypoCloudItem tokenClass="display-s" name="Display-S" size="xx/xx" view="Cc"/>
+          <TypoCloudItem tokenClass="heading-l" name="Heading-L" size="128 / 1.05" view="Dd"/>
+          <TypoCloudItem tokenClass="heading-m" name="Heading-M" size="xx/xx" view="Ee"/>
+          <TypoCloudItem tokenClass="heading-s" name="Heading-S" size="xx/xx" view="Ff"/>
+          <TypoCloudItem tokenClass="title-l" name="Title-L" size="128 / 1.05" view="Gg"/>
+          <TypoCloudItem tokenClass="title-m" name="Title-M" size="xx/xx" view="Hh"/>
+          <TypoCloudItem tokenClass="title-s" name="Title-S" size="xx/xx" view="Jj"/>
+          <TypoCloudItem tokenClass="body-l" name="Body-L" size="128 / 1.05" view="Kk"/>
+          <TypoCloudItem tokenClass="body-m" name="Body-M" size="xx/xx" view="Mm"/>
+          <TypoCloudItem tokenClass="body-s" name="Body-S" size="xx/xx" view="Nn"/>
+        </div>
       </DocSection>
 
 
