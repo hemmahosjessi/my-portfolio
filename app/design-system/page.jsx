@@ -2,14 +2,43 @@ import DocSection from "../components/DocSection/DocSection";
 import ColorSwatch from "../components/ColorSwatch/ColorSwatch";
 import styles from "./DesignSystem.module.css";
 import TypoCloudItem from "../components/TypoCloudItem/TypoCloudItem";
+import ComponentPreview from "../components/ComponentPreview/ComponentPreview";
+import Button from "../components/Button/Button";
+import ThemeToggle from "../components/ThemeToggle";
+import ComponentPreviewSection from "../components/ComponentPreview/ComponentPreviewSection";
+import Card from "../components/Card/Card";
+import PageHeader from "../components/PageHeader/PageHeader";
+import SpacingRadiusPreview from "../components/SpacingRadiusPreview/SpacingRadiusPreview";
+
+
 
 export default function DesignSystemPage() {
   return (
     <div className={styles.designSystemPage}>
+
+      <PageHeader
+      title="The great value of a good design system"
+      intro="A design system is a shared foundation of principles, tokens, and reusable components that helps teams design and build consistent, high-quality interfaces, faster and with more confidence."
+      body={
+        <p className="body-m">
+          This design system documents the foundations and building blocks
+          used across the site, including color, typography, spacing, and
+          reusable components.
+        </p>
+      }
+      expandableBody={
+        <>
+          <p className="body-m"> By centralizing decisions and patterns, a design system reduces friction in everyday work. Teams spend less time debating basics or rebuilding the same solutions, and more time focusing on real user problems. This leads to more consistent experiences across products, platforms, and touchpoints—strengthening both usability and brand identity. 
+          Design systems also help organizations move faster and stay aligned as they grow. When new features, teams, or markets are added, the system provides a stable framework to build on. Changes can be made in one place and scale across the product, making the system easier to maintain and adapt over time. 
+          Ultimately, a design system is not just a visual toolkit—it’s a collaboration tool. It connects design, development, and product around shared standards, enabling better decisions, smoother workflows, and a more resilient product ecosystem.
+          </p>
+        </>
+      }
+      />
       <DocSection
         kicker="Tokens"
         title="Colors"
-        preamble="This is a preamble"
+        preamble="Colors in the design system are defined as tokens rather than fixed hex values. Each token represents a single source of truth and is mapped to a specific hex value, which can change depending on context, such as light or dark mode. By referencing tokens instead of raw colors, the interface stays flexible, consistent, and easier to maintain as the system evolves."
         body="A palette built from neutrals, brand greens, and a strong accent yellow. Tokens are split into base colors and semantic roles so the UI stays consistent across light and dark mode."
       >
         <div className={styles.swatchGrid}>
@@ -73,12 +102,70 @@ export default function DesignSystemPage() {
       </DocSection>
 
 
-      <DocSection
+      {/* <DocSection
         kicker="Tokens"
         title="Spacings & radius"
-        body="Intro on spacings & radius."
+        preamble="This is the preamble"
+        body="Text about spacings & radius."
+      > */}
+
+      <DocSection
+        kicker="Tokens"
+        title="Spacing & radius"
+        preamble="Spacing and radius tokens define the rhythm and softness of the interface.
+                  By using consistent increments and reusable radii, layouts feel cohesive and components stay visually aligned as the system grows."
+        body="Spacing tokens create a shared scale for padding, gaps, and layout structure. Instead of choosing arbitrary values per component, the system uses a predictable set of steps—making the UI easier to maintain and easier to adjust globally over time.
+              Radius tokens define corner rounding across components. A small set of radii helps the interface feel consistent, while still allowing variation between subtle UI elements, larger surfaces, and fully rounded controls. Together, spacing and radius support a system that feels intentional, flexible, and scalable."
       >
+        <SpacingRadiusPreview />
       </DocSection>
+
+
+      <DocSection
+        kicker="Components"
+        title="Reusable components"
+        preamble="Reusable components are modular building blocks designed to be used across multiple parts of the product. Each component solves a specific UI need and is built to be flexible enough to work in different contexts without being recreated every time."
+      
+        sections={[
+          {
+            title: "Why it matters",
+            body: "By reusing components, the system becomes faster to work with and easier to scale. Designers and developers can focus on improving behaviour, accessibility, and visual quality instead of rebuilding the same patterns again and again. A shared set of components also ensures consistency across the interface. Users encounter familiar patterns, interactions, and visual cues, which strengthens usability and reinforces the product’s identity. Because components are maintained in one place, changes and improvements automatically propagate throughout the product. This makes the system more resilient over time and better prepared for new features, platforms, and evolving requirements."
+          }
+
+        ]}
+      >
+        <ComponentPreview title="Examples">
+
+          <ComponentPreviewSection title="Buttons">
+            <Button variant="primary" label="Primary" />
+            <Button variant="secondary" label="Secondary" />
+          </ComponentPreviewSection>
+
+          <ComponentPreviewSection title="Cards">
+            <div style={{ maxWidth: 320 }}>
+              <Card
+                image="/images/svante.png"
+                title="Card title"
+                description="Cards can hold content, media, and links."
+              />
+            </div>
+            <div style={{ maxWidth: 320 }}>
+              <Card
+                title="Card with placeholder"
+                description="This one has no image."
+              />
+            </div>
+          </ComponentPreviewSection>
+
+          <ComponentPreviewSection title="Icon buttons">
+            <ThemeToggle/>
+          </ComponentPreviewSection>
+          
+          <ComponentPreviewSection title="Section header">
+            <PageHeader title="Heading" intro="This is the text."/>
+          </ComponentPreviewSection>
+      </ComponentPreview>
+    </DocSection>
     </div>
   );
 }

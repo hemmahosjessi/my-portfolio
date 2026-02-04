@@ -1,0 +1,36 @@
+.preview {
+    width: 100%;
+    /* background: var(--surface-2); */
+    border: 1px solid var(--border);
+    border-radius: var(--radius-l);
+    padding: var(--space-8);
+  }
+  
+  .header {
+    margin-bottom: var(--space-6);
+    color: var(--text-muted);
+  }
+  
+  .sections {
+    display: grid;
+    gap: var(--space-8);
+  }
+  
+  /* Each section inside the preview */
+  .section {
+    display: grid;
+    gap: var(--space-4);
+  }
+  
+  .sectionHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  .sectionBody {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  

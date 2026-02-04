@@ -1,0 +1,68 @@
+.wrapper {
+    display: grid;
+    gap: var(--space-8);
+  }
+  
+  /* Radius shapes */
+  .radiusGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+  
+  @media (max-width: 1100px) {
+    .radiusGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .shape {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--surface-2);
+  }
+  
+  .radiusItem {
+    display: grid;
+    gap: var(--space-3);
+  }
+  
+  /* color tones */
+  .neutral {
+    background: var(--surface-2);
+  }
+  
+  .accent {
+    background: var(--accent);
+    border-color: transparent;
+  }
+  
+  .brand {
+    background: var(--text-highlight); /* byt till --brand om du vill */
+    border-color: transparent;
+  }
+  
+  /* Spacing “chips” */
+  .spacingRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4); /* här visualiseras spacing */
+  }
+
+
+
+
+  /* .wrap {
+    display: grid;
+    gap: var(--space-8);
+  }
+  
+  .block h3 {
+    margin: 0 0 var(--space-3) 0;
+  }
+  
+  .list {
+    display: grid;
+  } */
+  
+  

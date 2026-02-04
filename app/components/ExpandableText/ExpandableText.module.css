@@ -1,0 +1,18 @@
+.details {
+    margin-top: var(--space-4);
+  }
+  
+  .content {
+    margin-bottom: var(--space-3);
+  }
+  
+  .summary {
+    cursor: pointer;
+    list-style: none;
+    font: var(--title-s);
+    color: var(--text-muted);
+  }
+  
+  .summary::-webkit-details-marker {
+    display: none;
+  }

@@ -17,7 +17,7 @@
 --display-s: clamp(2rem, 4vw, 3rem);        /* 32 → 48 */
 
 --display-weight: 700;
---display-line-height: 1.20;
+--display-line-height: 1;
 
   
 /* Headings */
