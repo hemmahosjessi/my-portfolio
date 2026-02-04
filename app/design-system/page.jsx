@@ -49,18 +49,26 @@ export default function DesignSystemPage() {
   
       >
         <div className={styles.typoGrid}>
-          <TypoCloudItem tokenClass="display-l" name="Display-L" size="128 / 1.05" fontWeight="Weight - 500" view="Aa"/>
-          <TypoCloudItem tokenClass="display-m" name="Display-M" size="xx/xx" fontWeight="Weight - 500" view="Bb"/>
-          <TypoCloudItem tokenClass="display-s" name="Display-S" size="xx/xx" fontWeight="Weight - 500" view="Cc"/>
-          <TypoCloudItem tokenClass="heading-l" name="Heading-L" size="128 / 1.05" fontWeight="Weight - 500" view="Dd"/>
-          <TypoCloudItem tokenClass="heading-m" name="Heading-M" size="xx/xx" fontWeight="Weight - 500" view="Ee"/>
-          <TypoCloudItem tokenClass="heading-s" name="Heading-S" size="xx/xx" fontWeight="Weight - 500" view="Ff"/>
-          <TypoCloudItem tokenClass="title-l" name="Title-L" size="128 / 1.05" fontWeight="Weight - 500" view="Gg"/>
-          <TypoCloudItem tokenClass="title-m" name="Title-M" size="xx/xx" fontWeight="Weight - 500" view="Hh"/>
-          <TypoCloudItem tokenClass="title-s" name="Title-S" size="xx/xx" fontWeight="Weight - 500" view="Jj"/>
-          <TypoCloudItem tokenClass="body-l" name="Body-L" size="128 / 1.05" fontWeight="Weight - 500" view="Kk"/>
-          <TypoCloudItem tokenClass="body-m" name="Body-M" size="xx/xx" fontWeight="Weight - 500" view="Mm"/>
-          <TypoCloudItem tokenClass="body-s" name="Body-S" size="xx/xx" fontWeight="Weight - 500" view="Nn"/>
+        <TypoCloudItem tokenClass="display-l" name="Display-L" view="Aa"/>
+        <TypoCloudItem tokenClass="display-m" name="Display-M" view="Aa"/>
+        <TypoCloudItem tokenClass="display-s" name="Display-S" view="Aa"/>
+
+        <TypoCloudItem tokenClass="heading-l" name="Heading-L" view="Aa"/>
+        <TypoCloudItem tokenClass="heading-m" name="Heading-M" view="Aa"/>
+        <TypoCloudItem tokenClass="heading-s" name="Heading-S" view="Aa"/>
+
+        <TypoCloudItem tokenClass="title-l" name="Title-L" view="Aa"/>
+        <TypoCloudItem tokenClass="title-m" name="Title-M" view="Aa"/>
+        <TypoCloudItem tokenClass="title-s" name="Title-S" view="Aa"/>
+
+        <TypoCloudItem tokenClass="preamble-l" name="Preamble-L" view="Aa"/>
+        <TypoCloudItem tokenClass="preamble-m" name="Preamble-L" view="Aa"/>
+        <TypoCloudItem tokenClass="preamble-s" name="Preamble-L" view="Aa"/>
+
+        <TypoCloudItem tokenClass="body-l" name="Body-L" view="Aa"/>
+        <TypoCloudItem tokenClass="body-m" name="Body-M" view="Aa"/>
+        <TypoCloudItem tokenClass="body-s" name="Body-S" view="Aa"/>
+
         </div>
       </DocSection>
 

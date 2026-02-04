@@ -4,6 +4,12 @@
 
    :root {
     --font-base: "Raleway", system-ui, sans-serif;
+
+    /* Aliases (så dina utilities funkar) */
+    --font-display: var(--font-base);
+    --font-heading: var(--font-base);
+    --font-body: var(--font-base);
+    --font-preamble: var(--font-base);
   
 /* Display */
 --display-l: clamp(3.5rem, 8vw, 8rem);      /* 56 → 128 */
@@ -52,52 +58,63 @@
 
 
 
-  /* =========================================================
+ /* =========================================================
    Typography utilities
    ========================================================= */
 
 /* Display */
-.display-l {
+.display-l,
+.display-m,
+.display-s {
   font-family: var(--font-display);
-  font-size: var(--display-l);
-  line-height: var(--display-line-height);
   font-weight: var(--display-weight);
+  line-height: var(--display-line-height);
+
+  /* metadata (för docs/TypoCloudItem) */
+  --_line-height: var(--display-line-height);
+  --_font-weight: var(--display-weight);
+}
+
+.display-l {
+  font-size: var(--display-l);
+  --_font-size: var(--display-l);
 }
 
 .display-m {
-  font-family: var(--font-display);
   font-size: var(--display-m);
-  line-height: var(--display-line-height);
-  font-weight: var(--display-weight);
+  --_font-size: var(--display-m);
 }
 
 .display-s {
-  font-family: var(--font-display);
   font-size: var(--display-s);
-  line-height: var(--display-line-height);
-  font-weight: var(--display-weight);
+  --_font-size: var(--display-s);
 }
 
 /* Headings */
-.heading-l {
+.heading-l,
+.heading-m,
+.heading-s {
   font-family: var(--font-heading);
-  font-size: var(--heading-l);
-  line-height: var(--heading-line-height);
   font-weight: var(--heading-weight);
+  line-height: var(--heading-line-height);
+
+  --_line-height: var(--heading-line-height);
+  --_font-weight: var(--heading-weight);
+}
+
+.heading-l {
+  font-size: var(--heading-l);
+  --_font-size: var(--heading-l);
 }
 
 .heading-m {
-  font-family: var(--font-heading);
   font-size: var(--heading-m);
-  line-height: var(--heading-line-height);
-  font-weight: var(--heading-weight);
+  --_font-size: var(--heading-m);
 }
 
 .heading-s {
-  font-family: var(--font-heading);
   font-size: var(--heading-s);
-  line-height: var(--heading-line-height);
-  font-weight: var(--heading-weight);
+  --_font-size: var(--heading-s);
 }
 
 /* Preamble */
@@ -105,51 +122,66 @@
   font-family: var(--font-preamble);
   font-size: var(--preamble-l);
   line-height: var(--preamble-line-height);
-  font-weight: var(--preabmle-weight);
+  font-weight: var(--preamble-weight); /* FIX: stavning */
+
+  --_font-size: var(--preamble-l);
+  --_line-height: var(--preamble-line-height);
+  --_font-weight: var(--preamble-weight);
 }
 
 /* Titles */
-.title-l {
+.title-l,
+.title-m,
+.title-s {
   font-family: var(--font-heading);
-  font-size: var(--title-l);
-  line-height: var(--title-line-height);
   font-weight: var(--title-weight);
+  line-height: var(--title-line-height);
+
+  --_line-height: var(--title-line-height);
+  --_font-weight: var(--title-weight);
+}
+
+.title-l {
+  font-size: var(--title-l);
+  --_font-size: var(--title-l);
 }
 
 .title-m {
-  font-family: var(--font-heading);
   font-size: var(--title-m);
-  line-height: var(--title-line-height);
-  font-weight: var(--title-weight);
+  --_font-size: var(--title-m);
 }
 
 .title-s {
-  font-family: var(--font-heading);
   font-size: var(--title-s);
-  line-height: var(--title-line-height);
-  font-weight: var(--title-weight);
+  --_font-size: var(--title-s);
 }
 
 /* Body */
-.body-l {
+.body-l,
+.body-m,
+.body-s {
   font-family: var(--font-body);
-  font-size: var(--body-le);
-  line-height: var(--body-line-height);
   font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+
+  --_line-height: var(--body-line-height);
+  --_font-weight: var(--body-weight);
+}
+
+.body-l {
+  font-size: var(--body-l); /* FIX: body-l, inte body-le */
+  --_font-size: var(--body-l);
 }
 
 .body-m {
-  font-family: var(--font-body);
   font-size: var(--body-m);
-  line-height: var(--body-line-height);
-  font-weight: var(--body-weight);
+  --_font-size: var(--body-m);
 }
 
 .body-s {
-  font-family: var(--font-body);
   font-size: var(--body-s);
-  line-height: var(--body-line-height);
-  font-weight: var(--body-weight);
+  --_font-size: var(--body-s);
 }
+
 
   

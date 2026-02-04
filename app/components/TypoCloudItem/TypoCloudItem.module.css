@@ -9,11 +9,14 @@
 
 .fontName{
   margin-bottom: var(--space-2);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font: var(--heading-l);
+  /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
 }
 
 .bottom {
   letter-spacing: 0.2em;
+  /* valfritt: lite luft så den inte "krockar" */
+  padding-top: var(--space-2);
 }
 
 .bottom p {
@@ -32,9 +35,13 @@
   color: var(--text-muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
 }
 
 .content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
