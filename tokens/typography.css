@@ -22,6 +22,13 @@
 --heading-weight: 500;
 --heading-line-height: 1.3;
 
+
+/* Preamble */
+--preamble-l: clamp(1.125rem, 2vw, 1.25rem);  /* ~18 → 20 */
+
+--preamble-weight: 500;
+--preamble-line-height: 1.5;
+
   
 /* Titles */
 --title-l: clamp(1.125rem, 1.8vw, 1.25rem);  /* ~18 → 20 */
@@ -91,6 +98,14 @@
   font-size: var(--heading-s);
   line-height: var(--heading-line-height);
   font-weight: var(--heading-weight);
+}
+
+/* Preamble */
+.preamble-l {
+  font-family: var(--font-preamble);
+  font-size: var(--preamble-l);
+  line-height: var(--preamble-line-height);
+  font-weight: var(--preabmle-weight);
 }
 
 /* Titles */

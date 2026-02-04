@@ -2,32 +2,40 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-m);
-  overflow: hidden;
   padding: var(--space-4);
+  min-height: 250px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--space-6);
 }
 
-
-.meta{
-  /* padding: var(--space-3); */
-  display: flex;
-  flex-direction: column;
+.fontName{
+  margin-bottom: var(--space-2);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  gap: var(--space-1);
 }
 
-.view {
-  margin-top: var(--space-6);
+.bottom {
   letter-spacing: 0.2em;
 }
 
+.bottom p {
+  line-height: 1;
+  margin: 0;
+}
+
+
 .view p {
   line-height: 1;
+  /* height:  1ex; */
+}
+
+.meta {
+  font: var(--title-s);
+  color: var(--text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+}
+
+.content {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
 }
