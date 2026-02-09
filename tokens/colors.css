@@ -13,6 +13,7 @@
   
     /* Surfaces */
     --surface: #fcfcf8;
+    --surface-1: #F5F5EE;
     --surface-2: #f7f7f0;
   
     /* Borders */
@@ -47,6 +48,7 @@
   :root[data-theme="dark"] {
     --bg: #0e1110;
     --surface: #141817;
+    --surface-1: #222222;
     --surface-2: #1a1f1d;
   
     --text: #e5e7e6;

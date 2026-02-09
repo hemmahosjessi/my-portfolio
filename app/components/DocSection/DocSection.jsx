@@ -12,8 +12,10 @@ export default function DocsSection({
     return (
         <section className={styles.section}>
           <div className={styles.left}>
-            {kicker && <p className="title-m">{kicker}</p>}
-            {title && <h2 className="display-m">{title}</h2>}
+            <div className={styles.headingGroup}>
+                {kicker && <p className="title-m">{kicker}</p>}
+                {title && <h2 className="display-m">{title}</h2>}
+            </div>
             {preamble && <p className="preamble-l">{preamble}</p>}
             {body && <p className="body-m">{body}</p>}
     

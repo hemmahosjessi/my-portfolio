@@ -1,12 +1,12 @@
 import styles from "./ProjectGrid.module.css";
-import SectionHeader from "../SectionHeader/SectionHeader";
+import HomeSectionHeader from "../HomeSectionHeader/HomeSectionHeader";
 import Card from "../Card/Card";
 import Link from "next/link";
 
 export default function ProjectGrid({ title = "Frontend projects", label = "Selected work", showHeading = true }) {
   return (
     <section className={styles.section}>
-      {showHeading && <SectionHeader label={label} title={title} />}
+      {showHeading && <HomeSectionHeader label={label} title={title} />}
 
       <div className={styles.grid}>
         <Card

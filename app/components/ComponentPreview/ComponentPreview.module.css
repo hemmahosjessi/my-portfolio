@@ -1,36 +1,33 @@
-.preview {
-    width: 100%;
-    /* background: var(--surface-2); */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+  
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .tile {
+    /* background: var(--surface); */
     border: 1px solid var(--border);
     border-radius: var(--radius-l);
-    padding: var(--space-8);
-  }
+    padding: var(--space-6);
   
-  .header {
-    margin-bottom: var(--space-6);
-    color: var(--text-muted);
-  }
-  
-  .sections {
-    display: grid;
-    gap: var(--space-8);
-  }
-  
-  /* Each section inside the preview */
-  .section {
-    display: grid;
-    gap: var(--space-4);
-  }
-  
-  .sectionHeader {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+  
+    min-height: 140px;
   }
   
-  .sectionBody {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4);
+  /* (valfritt) gör så allt inne i tile inte får default margins */
+  .tile > * {
+    margin: 0;
   }
+  
   

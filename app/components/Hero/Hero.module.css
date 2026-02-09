@@ -1,53 +1,188 @@
-.hero {
-    display: flex;
-    flex-direction: column;
-    padding: 6rem;
-    background-color: var(--surface);
-    border-radius: 24px;
+@media (max-width: 1600px) {
+  .panel1Inner {
+    padding-inline: var(--page-padding);
+    max-width: 100%;
   }
-  
-  .top {
-    margin-bottom: 3rem;
+
+  .heroTitle {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
   }
-  
-  .eyebrow {
-    margin-top: 2rem;
+
+  .scrollCta {
+    margin-top: var(--space-6);
   }
-  
-  .title {
-    margin-top: 1rem;
-    width: 80%;
+}
+
+/* ---------- STACK ENGINE (overlay) ---------- */
+.stack {
+  position: relative;
+}
+
+/* Varje panel är sticky mot samma parent (.stack) */
+.panel {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+
+  background: var(--bg);
+  display: grid;
+  align-items: center;
+  /* box-shadow: 0 -1px 0 rgba(0,0,0,0.04); */
+
+  /* för att nästa panel ska kunna ligga över */
+  isolation: isolate;
+}
+
+
+
+/* z-index per panel (högre = ovanpå) */
+.panel1 { z-index: 1; }
+.panel2 { z-index: 2; }
+.panel3 { z-index: 3; }
+
+/* panel-specifik padding/bredd (om du vill) */
+.panel1 { /* kan vara tom */ }
+.panel2 { /* kan vara tom */ }
+.panel3 { /* kan vara tom */ }
+
+
+
+
+/* dina befintliga styles kan vara kvar */
+.eyebrow {
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.highlight {
+  color: var(--text-highlight);
+  margin-left: 0.30em;
+}
+
+/* Scroll CTA */
+.scrollCta {
+  margin-top: var(--space-8);
+}
+
+.scrollButton {
+  height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-full);
+  border: 0;
+
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.scrollButton:hover {
+  background: color-mix(in srgb, var(--surface-2) 85%, var(--text));
+}
+
+.scrollButton:active {
+  transform: translateY(1px);
+}
+
+/* About layout */
+.aboutOuter {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 6vw, 120px);
+  align-items: center;
+  padding: 48px 0;
+}
+
+.aboutCta {
+  margin-top: var(--space-8);
+}
+
+.heroTitle {
+  margin: 0;
+}
+
+.line {
+  display: block;
+}
+
+/* Clients / logos (din nuvarande) */
+.clientsOuter {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 6vw, 120px);
+  align-items: center;
+  padding: 48px 0;
+}
+
+.clientsLeft {
+  max-width: 640px;
+}
+
+.clientsRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logoCloud {
+  width: min(560px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 36px;
+  align-items: center;
+}
+
+.logoItem {
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--surface-2);
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.logoItem:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--surface-2) 85%, var(--text));
+}
+
+.logoItem img {
+  max-width: 140px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: grayscale(100%);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.logoItem:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 980px) {
+  .clientsOuter {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  
-  
-  .intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-left: 3rem;
-    padding-left: 50%;
-    gap: var(--space-6);
+  .clientsRight {
+    justify-content: flex-start;
   }
-  
-  .text {
-    max-width: 60ch;
-    /* margin-bottom: 2rem; */
+  .logoCloud {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
-  /* --- Responsive sanity --- */
-  @media (max-width: 900px) {
-    .hero {
-      padding: 3rem 0;
-    }
-  
-    .title {
-      width: 100%;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      line-height: 1.1;
-    }
-  
-    .intro {
-      margin-left: 0;
-      padding-left: 0;
-    }
-  }
+}
+
+.introSection {
+  padding-inline: var(--page-padding);
+  max-width: var(--width-xl, 1100px);
+}
+
+
+.designSection {
+  padding-inline: var(--page-padding);
+  max-width: var(--width-xl, 1100px);
+}

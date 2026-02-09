@@ -35,24 +35,63 @@ main {
 }
 
 
+
+
 /* =========================================
-   Typography reset – no default margins
+   Typography reset (Design system friendly)
    ========================================= */
 
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   h6,
-   p,
-   ul,
-   ol,
-   li,
-   figure,
-   blockquote {
-     margin: 0;
-   }
+/* Remove default margins so spacing is token-driven */
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+blockquote,
+dl, dd {
+  margin: 0;
+}
+
+/* Lists: keep padding, remove default margins (you control spacing) */
+ul, ol {
+  margin: 0;
+  padding-left: 1.25em; /* sensible default indentation */
+}
+
+li {
+  margin: 0;
+}
+
+/* Make media elements behave nicely in text flow */
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* Better text rendering */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  line-height: var(--body-line-height, 1.6);
+}
+
+/* Safer heading wrapping */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance; /* supported in modern browsers */
+}
+
+/* Prevent long strings from breaking layouts */
+p, li, a, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Inputs inherit typography so forms match the system */
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
 
 
 

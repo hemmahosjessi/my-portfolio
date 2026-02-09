@@ -5,6 +5,11 @@
     align-items: start;
   }
 
+  .headingGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
 
     /* heading and body sections */
   .subSections {
@@ -25,10 +30,10 @@
   /* Vänsterspalten */
   .left {
     position: sticky;
-    top: calc(72px + var(--space-8)); /* 72px = din headerhöjd, justera vid behov */
+    top: calc(72px + var(--space-6)); /* 72px = din headerhöjd, justera vid behov */
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-8);
     padding-right: var(--space-10);
   }
   

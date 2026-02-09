@@ -1,5 +1,5 @@
 import styles from "./CardGrid.module.css";
-import SectionHeader from "../SectionHeader/SectionHeader";
+import HomeSectionHeader from "../HomeSectionHeader/HomeSectionHeader";
 
 export default function CardGrid({
   title,
@@ -10,7 +10,7 @@ export default function CardGrid({
   return (
     <section className={styles.section}>
       {(title || label) && (
-        <SectionHeader title={title} label={label} />
+        <HomeSectionHeader title={title} label={label} />
       )}
 
       <div className={`${styles.grid} ${styles[variant] ?? ""}`}>

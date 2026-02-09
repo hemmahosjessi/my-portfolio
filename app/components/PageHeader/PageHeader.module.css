@@ -1,7 +1,45 @@
-.header{
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
-    max-width: 60%;
-  }
-  
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, var(--space-5));
+}
+
+/* Gör att wrappers inte “stretchar konstigt” */
+.titleWrap,
+.preambleWrap,
+.bodyWrap {
+  width: 100%;
+}
+
+/* ===== Measures (justera dessa fritt) ===== */
+/* Rubrik får vara bredast */
+.titleWrap {
+  max-width: var(--width-xl);
+}
+
+/* Preamble lite smalare än rubrik (valfritt) */
+.preambleWrap {
+  max-width: var(--width-m);
+}
+
+/* Body smalast för läsbarhet */
+.bodyWrap {
+  max-width: var(--width-m);
+}
+
+/* Avstånd mellan titel och preamble (om båda finns) */
+.titleWrap + .preambleWrap {
+  margin-top: var(--title-gap, var(--space-3));
+}
+
+/* Om du vill: tajtare mellan preamble och body */
+.preambleWrap + .bodyWrap {
+  margin-top: var(--space-3);
+}
+
+/* Remove any last margins if you ever reintroduce them */
+.bodyWrap > *:last-child {
+  margin-bottom: 0;
+}
+
+

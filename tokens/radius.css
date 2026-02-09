@@ -6,5 +6,7 @@
   --radius-s: 8px;
   --radius-m: 16px;
   --radius-l: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
   --radius-full: 999px;
 }

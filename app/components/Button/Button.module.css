@@ -1,5 +1,5 @@
 .button {
-  height: 40px;
+  height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@
     background: var(--accent);
     color: var(--accent-contrast);
     width: fit-content;
-    align-self: flex-start;
+    /* align-self: flex-start; */
   }
   
 

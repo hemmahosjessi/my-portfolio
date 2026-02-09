@@ -5,10 +5,10 @@ import TypoCloudItem from "../components/TypoCloudItem/TypoCloudItem";
 import ComponentPreview from "../components/ComponentPreview/ComponentPreview";
 import Button from "../components/Button/Button";
 import ThemeToggle from "../components/ThemeToggle";
-import ComponentPreviewSection from "../components/ComponentPreview/ComponentPreviewSection";
 import Card from "../components/Card/Card";
 import PageHeader from "../components/PageHeader/PageHeader";
 import SpacingRadiusPreview from "../components/SpacingRadiusPreview/SpacingRadiusPreview";
+import PreviewTile from "../components/ComponentPreview/PreViewTile";
 
 
 
@@ -16,6 +16,7 @@ export default function DesignSystemPage() {
   return (
     <div className={styles.designSystemPage}>
 
+<div className="PageHeaderSection">
       <PageHeader
       title="The great value of a good design system"
       intro="A design system is a shared foundation of principles, tokens, and reusable components that helps teams design and build consistent, high-quality interfaces, faster and with more confidence."
@@ -23,18 +24,22 @@ export default function DesignSystemPage() {
         <p className="body-m">
           This design system documents the foundations and building blocks
           used across the site, including color, typography, spacing, and
-          reusable components.
+          reusable components. By centralizing decisions and patterns, a design 
+          system reduces friction in everyday work. Teams spend less time debating 
+          basics or rebuilding the same solutions, and more time focusing on real user problems.
         </p>
       }
       expandableBody={
         <>
-          <p className="body-m"> By centralizing decisions and patterns, a design system reduces friction in everyday work. Teams spend less time debating basics or rebuilding the same solutions, and more time focusing on real user problems. This leads to more consistent experiences across products, platforms, and touchpoints—strengthening both usability and brand identity. 
+          <p className="body-m">  This leads to more consistent experiences across products, platforms, and touchpoints—strengthening both usability and brand identity. 
           Design systems also help organizations move faster and stay aligned as they grow. When new features, teams, or markets are added, the system provides a stable framework to build on. Changes can be made in one place and scale across the product, making the system easier to maintain and adapt over time. 
           Ultimately, a design system is not just a visual toolkit—it’s a collaboration tool. It connects design, development, and product around shared standards, enabling better decisions, smoother workflows, and a more resilient product ecosystem.
           </p>
         </>
       }
       />
+  </div>
+
       <DocSection
         kicker="Tokens"
         title="Colors"
@@ -102,13 +107,6 @@ export default function DesignSystemPage() {
       </DocSection>
 
 
-      {/* <DocSection
-        kicker="Tokens"
-        title="Spacings & radius"
-        preamble="This is the preamble"
-        body="Text about spacings & radius."
-      > */}
-
       <DocSection
         kicker="Tokens"
         title="Spacing & radius"
@@ -134,37 +132,31 @@ export default function DesignSystemPage() {
 
         ]}
       >
-        <ComponentPreview title="Examples">
-
-          <ComponentPreviewSection title="Buttons">
+        <ComponentPreview>
+          <PreviewTile>
             <Button variant="primary" label="Primary" />
             <Button variant="secondary" label="Secondary" />
-          </ComponentPreviewSection>
-
-          <ComponentPreviewSection title="Cards">
-            <div style={{ maxWidth: 320 }}>
-              <Card
-                image="/images/svante.png"
-                title="Card title"
-                description="Cards can hold content, media, and links."
-              />
-            </div>
-            <div style={{ maxWidth: 320 }}>
-              <Card
-                title="Card with placeholder"
-                description="This one has no image."
-              />
-            </div>
-          </ComponentPreviewSection>
-
-          <ComponentPreviewSection title="Icon buttons">
             <ThemeToggle/>
-          </ComponentPreviewSection>
-          
-          <ComponentPreviewSection title="Section header">
-            <PageHeader title="Heading" intro="This is the text."/>
-          </ComponentPreviewSection>
-      </ComponentPreview>
+          </PreviewTile>
+          <PreviewTile>
+              <Card
+                title="Card title"
+                description="Cards can hold content, media, and links."/>
+          </PreviewTile>
+
+
+          <PreviewTile>
+            <PageHeader 
+              variant="page" 
+              title="Heading" 
+              intro="This is the preamble."
+              />
+          </PreviewTile>
+
+          <PreviewTile>
+          <ColorSwatch name="Accent" hex="#FFD400" role="Primary CTA" />
+          </PreviewTile>
+        </ComponentPreview>
     </DocSection>
     </div>
   );

@@ -4,11 +4,9 @@
   
   .label {
     color: var(--text-muted);
-    margin-bottom: 0.5rem; /* nästan inget */
-  }
+    margin-bottom: 0.5rem; 
+  } 
   
   .title {  
-    margin-top: 0; /* viktigt */
+    margin-top: 0; 
   }
-  
-  

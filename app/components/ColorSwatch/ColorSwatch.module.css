@@ -3,6 +3,7 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-m);
     overflow: hidden;
+    width: 100%;
   }
   
   .swatch{

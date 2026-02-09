@@ -6,7 +6,7 @@
 
 
     /* Page / layout */
-    --page-padding: clamp(16px, 4vw, 24px);
+    --page-padding: clamp(16px, 4vw, 48px);
 
 
 
@@ -25,4 +25,10 @@
   --space-13: 80px;
   --space-14: 96px;
   --space-15: 120px;
+
+  --width-xl: 1200px;
+  --width-l: 800px;
+  --width-m: 640px;
+  --width-s: 480px
+
 }

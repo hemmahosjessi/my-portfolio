@@ -1,6 +1,6 @@
-import styles from "./SectionHeader.module.css";
+import styles from "./HomeSectionHeader.module.css";
 
-export default function SectionHeader({ label, title }) {
+export default function HomeSectionHeader({ label, title }) {
   return (
     <header className={styles.header}>
       {label && <p className={`title-m ${styles.label}`}>{label}</p>}
