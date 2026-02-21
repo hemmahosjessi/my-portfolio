@@ -12,8 +12,6 @@ export default function Header() {
         <div className="navLinks">
           <Link className="navLink navLinkHome" href="/">Home</Link>
           <NavLink href="/about">About</NavLink>
-          <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
         </div>
 
         <div className="navRight">

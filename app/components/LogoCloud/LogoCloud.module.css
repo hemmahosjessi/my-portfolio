@@ -1,0 +1,52 @@
+/* Grid: 3 kolumner desktop, 2 kolumner på mindre skärm */
+.logoCloud {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 20px);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  
+    /* En enda “storleks-token” för loggan (responsiv) */
+    --logoH: clamp(60px, 6vw, 110px);
+    --cellPad: clamp(10px, 1.6vw, 16px);
+    --cellRadius: 14px;
+  }
+  
+  @media (max-width: 720px) {
+    .logoCloud {
+      --logoH: clamp(42px, 9vw, 72px);
+    }
+  }
+  
+  /* Varje cell får samma “scen” så loggor upplevs lika stora */
+  .logoCloud__item {
+    margin: 0;
+  }
+  
+  /* Förberett för länk: a och div delar samma stil */
+  .logoCloud__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--cellPad);
+    border-radius: var(--cellRadius);
+    border: 1px solid rgba(0,0,0,0.06);
+    aspect-ratio: 1 / 1;
+   
+  }
+  
+  .logoCloud__img {
+    height: var(--logoHItem, var(--logoH)); /* per item → fallback till bas */
+    width: auto;
+    max-width: min(100%, 260px); /* justera vid behov */
+    object-fit: contain;
+    display: block;
+  }
+  
+  /* Fokus för länkar (tillgängligt) */
+  .logoCloud__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    border-radius: calc(var(--cellRadius) + 2px);
+  }
